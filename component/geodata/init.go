@@ -36,7 +36,7 @@ func InitGeoSite() error {
 }
 
 func downloadGeoSite(path string) (err error) {
-	resp, err := getUrl("https://ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geosite.dat")
+	resp, err := getUrl("https://ghproxy.com/https://raw.githubusercontent.com/yuumimi/rules/release/clash/geosite.dat")
 	if err != nil {
 		return
 	}
