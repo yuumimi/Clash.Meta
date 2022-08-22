@@ -2,9 +2,9 @@ FROM golang:alpine as builder
 
 RUN apk add --no-cache make git && \
     mkdir /clash-config && \
-    wget -O /clash-config/Country.mmdb https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb && \
-    wget -O /clash-config/geosite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat && \
-    wget -O /clash-config/geoip.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
+    wget -O /clash-config/Country.mmdb https://raw.githubusercontent.com/yuumimi/rules/release/clash/Country.mmdb && \
+    wget -O /clash-config/geosite.dat https://raw.githubusercontent.com/yuumimi/rules/release/clash/geosite.dat && \
+    wget -O /clash-config/geoip.dat https://raw.githubusercontent.com/yuumimi/rules/release/clash/geoip.dat
 
 
 COPY . /clash-src
